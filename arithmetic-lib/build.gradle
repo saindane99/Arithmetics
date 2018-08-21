@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/saindane99/Arithmetics'
     gitUrl = 'https://github.com/saindane99/Arithmetics.git'
 
-    libraryVersion = '1.0.2'
+    libraryVersion = '1.0.3'
 
     developerId = 'gladiator'
     developerName = 'Shailesh Saindane'
@@ -24,7 +24,23 @@ ext {
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
 }
+task createPom << {
+    pom {
+        project {
+            groupId 'com.arithmetic_lib'
+            artifactId 'arithmetic-lib'
+            version '1.0.3'
 
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+        }
+    }.writeTo("pom.xml")
+}
 android {
     compileSdkVersion 27
     defaultConfig {
