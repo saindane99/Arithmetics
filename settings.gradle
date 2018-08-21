@@ -1,1 +1,1 @@
-include ':app', ':math-lib', ':arithmetic-lib'
+include ':app', ':arithmetic-lib'
