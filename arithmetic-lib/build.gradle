@@ -25,6 +25,24 @@ ext {
     allLicenses = ["Apache-2.0"]
 }
 
+task writeNewPom << {
+    pom {
+        project {
+            groupId 'com.arithmetic_lib'
+            artifactId 'arithmetic-lib'
+            version '1.0.3'
+
+            inceptionYear '2018'
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+        }
+    }.writeTo("$buildDir/poms/pom-default.xml")
+}
 android {
     compileSdkVersion 27
     defaultConfig {
