@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 ext {
     bintrayRepo = 'maven-math'
@@ -23,6 +24,22 @@ ext {
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'com.arithmetic_lib'
+            artifactId 'arithmetic-lib'
+            version '1.0.3'
+            artifact("$buildDir/outputs/aar/arithmetic-lib-release.aar")
+        }
+    }
+    repositories {
+        maven {
+            url "$buildDir/poms"
+        }
+    }
 }
 
 android {
