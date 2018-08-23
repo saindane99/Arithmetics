@@ -37,7 +37,7 @@ publish {
     def publishVersionID = '1.0.3'
 
     userOrg = 'sanginfo99'
-    repoName = 'arithmetic-lib'
+    repoName = 'maven-math'
     groupId = groupProjectID
     artifactId = artifactProjectID
     publishVersion = publishVersionID
