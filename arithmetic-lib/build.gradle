@@ -18,7 +18,7 @@ ext {
     siteUrl = 'https://github.com/saindane99/Arithmetics'
     gitUrl = 'https://github.com/saindane99/Arithmetics.git'
 
-    libraryVersion = '1.0.4'
+    libraryVersion = '1.0.5'
 
     developerId = 'gladiator'
     developerName = 'Shailesh Saindane'
@@ -34,7 +34,7 @@ publish {
 
     def groupProjectID = 'com.arithmetic_lib'
     def artifactProjectID = 'arithmetic-lib'
-    def publishVersionID = '1.0.4'
+    def publishVersionID = '1.0.5'
 
     userOrg = ''
     repoName = 'maven-math'
@@ -76,7 +76,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0"
+        versionName "2.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
