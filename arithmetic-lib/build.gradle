@@ -1,4 +1,9 @@
+apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+//apply plugin: 'com.novoda.bintray-release'// must be applied after your artifact generating plugin (eg. java / com.android.library)
+//apply plugin: 'maven-publish'
 
 ext {
     bintrayRepo = 'maven-math'
@@ -24,6 +29,46 @@ ext {
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
 }
+
+publish {
+
+    def groupProjectID = 'com.arithmetic_lib'
+    def artifactProjectID = 'arithmetic-lib'
+    def publishVersionID = '1.0.3'
+
+    userOrg = 'sanginfo99'
+    repoName = 'arithmetic-lib'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'Arithmetic Operations.'
+    website = 'https://github.com/saindane99/Arithmetics'
+
+
+    publishing {
+        publications {
+            MyPub(MavenPublication) {
+                groupId groupProjectID
+                artifactId artifactProjectID
+                version publishVersionID
+
+                //don't forget to add bundleRelease
+                artifact bundleRelease
+
+            }
+        }
+    }
+    publications = ['MyPub']
+}
+
+/*publish {
+    userOrg = ''
+    groupId = 'com.arithmetic_lib'
+    artifactId = 'arithmetic-lib'
+    publishVersion = '1.0.3'
+    desc = 'Arithmetic Operations.'
+    website = 'https://github.com/saindane99/Arithmetics'
+}*/
 
 android {
     compileSdkVersion 27
@@ -53,5 +98,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
-apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/bintrayv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/bintrayv1.gradle'
 apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/installv1.gradle'
