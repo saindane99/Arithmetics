@@ -102,6 +102,7 @@ dependencies {
 apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/installv1.gradle'
 
 
+/*
 if (project.hasProperty("android")) {
     task sourcesJar(type: Jar) {
         classifier = 'sources'
@@ -128,3 +129,4 @@ artifacts {
     archives javadocJar
     archives sourcesJar
 }
+*/
