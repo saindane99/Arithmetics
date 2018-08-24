@@ -18,7 +18,7 @@ ext {
     siteUrl = 'https://github.com/saindane99/Arithmetics'
     gitUrl = 'https://github.com/saindane99/Arithmetics.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.4'
 
     developerId = 'gladiator'
     developerName = 'Shailesh Saindane'
@@ -34,7 +34,7 @@ publish {
 
     def groupProjectID = 'com.arithmetic_lib'
     def artifactProjectID = 'arithmetic-lib'
-    def publishVersionID = '1.0.0'
+    def publishVersionID = '1.0.4'
 
     userOrg = ''
     repoName = 'maven-math'
@@ -101,8 +101,6 @@ dependencies {
 //apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/bintrayv1.gradle'
 apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/installv1.gradle'
 
-
-
 if (project.hasProperty("android")) {
     task sourcesJar(type: Jar) {
         classifier = 'sources'
@@ -129,4 +127,5 @@ artifacts {
     archives javadocJar
     archives sourcesJar
 }
+
 
