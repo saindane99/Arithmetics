@@ -101,7 +101,7 @@ dependencies {
 //apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/bintrayv1.gradle'
 apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/installv1.gradle'
 
-/*
+
 if (project.hasProperty("android")) {
     task sourcesJar(type: Jar) {
         classifier = 'sources'
@@ -127,4 +127,4 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 artifacts {
     archives javadocJar
     archives sourcesJar
-}*/
+}
