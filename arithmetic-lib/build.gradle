@@ -1,6 +1,17 @@
 apply plugin: 'com.android.library'
 //apply plugin: 'com.novoda.bintray-release'
 //apply plugin: 'maven-publish'
+buildscript {
+    repositories {
+        maven {
+            url 'https://oss.jfrog.org/oss-snapshot-local'
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7-SNAPSHOT"
+    }
+}
 
 ext {
     bintrayRepo = 'maven-math'
@@ -74,9 +85,7 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "2.0"
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
