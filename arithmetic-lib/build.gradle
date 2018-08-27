@@ -15,7 +15,7 @@ ext {
     siteUrl = 'https://github.com/saindane99/Arithmetics'
     gitUrl = 'https://github.com/saindane99/Arithmetics.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.3'
 
     developerId = 'gladiator'
     developerName = 'Shailesh Saindane'
