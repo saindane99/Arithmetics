@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
-//apply plugin: 'com.novoda.bintray-release'
-//apply plugin: 'maven-publish'
+apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'maven-publish'
 
 ext {
     bintrayRepo = 'maven-math'
@@ -15,7 +15,7 @@ ext {
     siteUrl = 'https://github.com/saindane99/Arithmetics'
     gitUrl = 'https://github.com/saindane99/Arithmetics.git'
 
-    libraryVersion = '1.0.3'
+    libraryVersion = '1.0.4'
 
     developerId = 'gladiator'
     developerName = 'Shailesh Saindane'
@@ -27,6 +27,46 @@ ext {
     allLicenses = ["Apache-2.0"]
 }
 
+publish {
+
+    def groupProjectID = 'com.arithmetic_lib'
+    def artifactProjectID = 'arithmetic-lib'
+    def publishVersionID = '1.0.4'
+
+    userOrg = ''
+    repoName = 'maven-math'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'Arithmetic Operations.'
+    website = 'https://github.com/saindane99/Arithmetics'
+
+
+    publishing {
+        publications {
+            MyPub(MavenPublication) {
+                groupId groupProjectID
+                artifactId artifactProjectID
+                version publishVersionID
+
+                //don't forget to add bundleRelease
+                artifact bundleRelease
+
+            }
+        }
+    }
+    publications = ['MyPub']
+}
+
+/*publish {
+    userOrg = ''
+    groupId = 'com.arithmetic_lib'
+    artifactId = 'arithmetic-lib'
+    publishVersion = '1.0.3'
+    desc = 'Arithmetic Operations.'
+    website = 'https://github.com/saindane99/Arithmetics'
+}*/
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -34,7 +74,9 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "2.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -53,5 +95,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
-apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/bintrayv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/bintrayv1.gradle'
 apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/installv1.gradle'
