@@ -1,17 +1,6 @@
 apply plugin: 'com.android.library'
 //apply plugin: 'com.novoda.bintray-release'
 //apply plugin: 'maven-publish'
-buildscript {
-    repositories {
-        maven {
-            url 'https://oss.jfrog.org/oss-snapshot-local'
-        }
-        jcenter()
-    }
-    dependencies {
-        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7-SNAPSHOT"
-    }
-}
 
 ext {
     bintrayRepo = 'maven-math'
@@ -37,46 +26,6 @@ ext {
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
 }
-
-/*publish {
-
-    def groupProjectID = 'com.arithmetic_lib'
-    def artifactProjectID = 'arithmetic-lib'
-    def publishVersionID = '1.0.0'
-
-    userOrg = ''
-    repoName = 'maven-math'
-    groupId = groupProjectID
-    artifactId = artifactProjectID
-    publishVersion = publishVersionID
-    desc = 'Arithmetic Operations.'
-    website = 'https://github.com/saindane99/Arithmetics'
-
-
-    publishing {
-        publications {
-            MyPub(MavenPublication) {
-                groupId groupProjectID
-                artifactId artifactProjectID
-                version publishVersionID
-
-                //don't forget to add bundleRelease
-                artifact bundleRelease
-
-            }
-        }
-    }
-    publications = ['MyPub']
-}*/
-
-/*publish {
-    userOrg = ''
-    groupId = 'com.arithmetic_lib'
-    artifactId = 'arithmetic-lib'
-    publishVersion = '1.0.3'
-    desc = 'Arithmetic Operations.'
-    website = 'https://github.com/saindane99/Arithmetics'
-}*/
 
 android {
     compileSdkVersion 27
