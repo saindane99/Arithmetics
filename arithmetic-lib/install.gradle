@@ -1,5 +1,5 @@
 apply plugin: 'com.github.dcendents.android-maven'
-apply from: '../bintray.data.gradle'
+apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/bintray.data.gradle'
 
 group = publishedGroupId
 

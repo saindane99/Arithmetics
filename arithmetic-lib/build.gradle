@@ -135,7 +135,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
-apply from: '../install.gradle'
-apply from: '../bintray.gradle'
+apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/install.gradle'
+apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/bintray.gradle'
 //apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/bintrayv1.gradle'
 //apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/installv1.gradle'
