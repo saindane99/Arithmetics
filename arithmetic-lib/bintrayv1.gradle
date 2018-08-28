@@ -70,7 +70,7 @@ publish {
 
     def groupProjectID = 'com.arithmetic_lib'
     def artifactProjectID = 'arithmetic-lib'
-    def publishVersionID = '1.0.7'
+    def publishVersionID = '1.1.3'
 
     userOrg = ''
     repoName = 'maven-math'
