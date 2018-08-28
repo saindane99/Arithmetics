@@ -1,0 +1,24 @@
+ext {
+    bintrayRepo = 'maven-math'
+    bintrayName = 'arithmetic-lib'
+
+    publishedGroupId = 'com.arithmetic_lib'
+    libraryName = 'arithmetic-lib'
+    artifact = 'arithmetic-lib'
+
+    libraryDescription = 'Arithmetic Operations.'
+
+    siteUrl = 'https://github.com/saindane99/Arithmetics'
+    gitUrl = 'https://github.com/saindane99/Arithmetics.git'
+
+    libraryVersion = '1.1.0'
+
+    developerId = 'gladiator'
+    developerName = 'Shailesh Saindane'
+    developerEmail = 'shailesh.saindane@sanginfo.com'
+    organization = ''
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
