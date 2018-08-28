@@ -1,5 +1,5 @@
+//apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'maven-publish'
 
 ext {
@@ -15,7 +15,7 @@ ext {
     siteUrl = 'https://github.com/saindane99/Arithmetics'
     gitUrl = 'https://github.com/saindane99/Arithmetics.git'
 
-    libraryVersion = '1.0.5'
+    libraryVersion = '1.0.7'
 
     developerId = 'gladiator'
     developerName = 'Shailesh Saindane'
@@ -27,11 +27,11 @@ ext {
     allLicenses = ["Apache-2.0"]
 }
 
-publish {
+/*publish {
 
     def groupProjectID = 'com.arithmetic_lib'
     def artifactProjectID = 'arithmetic-lib'
-    def publishVersionID = '1.0.5'
+    def publishVersionID = '1.0.6'
 
     userOrg = ''
     repoName = 'maven-math'
@@ -56,7 +56,7 @@ publish {
         }
     }
     publications = ['MyPub']
-}
+}*/
 
 /*publish {
     userOrg = ''
@@ -95,5 +95,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
-//apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/bintrayv1.gradle'
+apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/bintrayv1.gradle'
 apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/installv1.gradle'

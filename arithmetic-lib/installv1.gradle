@@ -1,5 +1,4 @@
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'signing'
 
 group = publishedGroupId // Maven Group ID for the artifact
 
@@ -9,7 +8,7 @@ install {
         pom.project {
             packaging 'aar'
             groupId publishedGroupId
-            artifactId Artifact
+            artifactId artifact
 
             // Add your description here
             name libraryName
