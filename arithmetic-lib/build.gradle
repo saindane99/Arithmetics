@@ -1,6 +1,6 @@
 //apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
-//apply plugin: 'maven-publish'
+apply plugin: 'maven-publish'
 //apply plugin: 'com.github.dcendents.android-maven'
 
 
@@ -17,7 +17,7 @@ ext {
     siteUrl = 'https://github.com/saindane99/Arithmetics'
     gitUrl = 'https://github.com/saindane99/Arithmetics.git'
 
-    libraryVersion = '1.1.0'
+    libraryVersion = '1.1.1'
 
     developerId = 'gladiator'
     developerName = 'Shailesh Saindane'
@@ -28,74 +28,6 @@ ext {
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
 }
-/*
-publish {
-
-    def groupProjectID = 'com.arithmetic_lib'
-    def artifactProjectID = 'arithmetic-lib'
-    def publishVersionID = '1.0.9'
-
-    userOrg = ''
-    repoName = 'maven-math'
-    groupId = groupProjectID
-    artifactId = artifactProjectID
-    publishVersion = publishVersionID
-    desc = 'Arithmetic Operations.'
-    website = 'https://github.com/saindane99/Arithmetics'
-
-
-    publishing {
-        publications {
-            MyPub(MavenPublication) {
-                groupId groupProjectID
-                artifactId artifactProjectID
-                version publishVersionID
-
-                //don't forget to add bundleRelease
-                artifact bundleRelease
-
-            }
-        }
-    }
-    publications = ['MyPub']
-}
-install {
-    repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
-        pom.project {
-            packaging 'aar'
-            groupId publishedGroupId
-            artifactId artifact
-
-            // Add your description here
-            name libraryName
-            description libraryDescription
-            url siteUrl
-
-            // Set your license
-            licenses {
-                license {
-                    name licenseName
-                    url licenseUrl
-                }
-            }
-            developers {
-                developer {
-                    id developerId
-                    name developerName
-                    email developerEmail
-                }
-            }
-            scm {
-                connection gitUrl
-                developerConnection gitUrl
-                url siteUrl
-
-            }
-        }
-
-    }
-}*/
 
 /*publish {
     userOrg = ''
