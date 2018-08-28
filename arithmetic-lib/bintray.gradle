@@ -1,5 +1,4 @@
 apply plugin: 'com.jfrog.bintray'
-apply from: 'https://raw.githubusercontent.com/saindane99/Arithmetics/master/arithmetic-lib/bintray.data.gradle'
 
 version = libraryVersion
 
